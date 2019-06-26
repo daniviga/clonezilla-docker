@@ -1,0 +1,12 @@
+version: '3'
+services:
+  clonezilla:
+    image: clonezilla
+    privileged: true
+    command: sleep infinity
+    volumes:
+      - /dev:/dev
+      # - ./images:/home/partimag
+    environment:
+      - TERM=xterm
+    stop_signal: SIGKILL
