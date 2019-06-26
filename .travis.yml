@@ -1,0 +1,8 @@
+services: docker
+language: bash
+
+install:
+  - docker build -t clonezilla -f Dockerfile .
+
+script:
+  - docker run --rm -ti clonezilla pacman -Qqe
